@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>uk.ac.dotrural.irp</groupId>
+	<artifactId>ecosystem.core</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<jdkLevel>1.5</jdkLevel>
+		<jersey.version>1.0.2</jersey.version>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>${jdkLevel}</source>
+					<target>${jdkLevel}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey.contribs</groupId>
+			<artifactId>jersey-spring</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-json</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.jena</groupId>
+			<artifactId>jena-fuseki</artifactId>
+			<version>0.2.1-incubating</version>
+		</dependency>
+	</dependencies>
+	<repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2</url>
+		</repository>
+		<repository>
+			<id>apache-repo-releases</id>
+			<url>https://repository.apache.org/content/repositories/releases/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>apache-repo-snapshops</id>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>https://repository.apache.org/content/repositories/snapshots/</url>
+		</repository>
+		<repository>
+			<id>totalchange</id>
+			<name>total change</name>
+			<url>http://www.totalchange.com/maven2</url>
+		</repository>
+		<repository>
+			<id>goss.archiva.snapshots</id>
+			<name>goss </name>
+			<url>http://yealm:8280/archiva/repository/goss.archiva.snapshots</url>
+		</repository>
+	</repositories>
+
+</project>
