@@ -2,8 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>uk.ac.dotrural.irp</groupId>
-	<artifactId>ecosystem.core</artifactId>
+	<artifactId>ecosystem-core</artifactId>
 	<packaging>jar</packaging>
+	<name>dot.rural IRP Ecosystem Core</name>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
@@ -11,6 +12,10 @@
 		<jersey.version>1.0.2</jersey.version>
 	</properties>
 
+	<scm>
+		<developerConnection>dcorsar</developerConnection>
+		<url>https://github.com/dcorsar/irp-ecosystem-core</url>
+	</scm>
 	<build>
 		<plugins>
 			<plugin>
@@ -24,6 +29,17 @@
 			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>internal</id>
+			<url>http://dtp-82.sncs.abdn.ac.uk:8081/archiva/repository/internal/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>http://dtp-82.sncs.abdn.ac.uk:8081/archiva/repository/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -48,6 +64,28 @@
 		</dependency>
 	</dependencies>
 	<repositories>
+		<repository>
+			<id>internal</id>
+			<name>Archiva Managed Internal Repository</name>
+			<url>http://dtp-82.sncs.abdn.ac.uk:8081/archiva/repository/internal/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<name>Archiva Managed Snapshot Repository</name>
+			<url>http://dtp-82.sncs.abdn.ac.uk:8081/archiva/repository/snapshots/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
 		<repository>
 			<id>maven2-repository.dev.java.net</id>
 			<name>Java.net Repository for Maven</name>
