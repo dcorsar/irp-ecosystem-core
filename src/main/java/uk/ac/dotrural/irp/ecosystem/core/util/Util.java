@@ -72,8 +72,17 @@ public class Util {
 		
 	}
 
-	public static String getMD5(String str) throws NoSuchAlgorithmException {
-		MessageDigest algorithm = MessageDigest.getInstance("MD5");
+	public static String getMD5(String str) {
+		MessageDigest algorithm = null;
+		try {
+			algorithm = MessageDigest.getInstance("MD5");
+		} catch (NoSuchAlgorithmException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(System.err);
+		}
+		if (algorithm == null){
+			return str;
+		}
 		algorithm.reset();
 		algorithm.update(str.getBytes());
 
