@@ -79,6 +79,8 @@ public class SPARQLEndpoint {
 			throw new ExceptionReporter(new NullPointerException(
 					"No initialising parameters given."));
 
+		System.out.format("   INFO: sparql_framework " + si.getSparqlFramework());
+		
 		if (si.getUri() != null && !si.getUri().trim().equals("")) {
 			serviceURI = si.getUri().trim();
 
@@ -88,12 +90,15 @@ public class SPARQLEndpoint {
 			if (sparql_framework.equals(Constants.FUSEKI)) {
 				updateURI = serviceURI + "/update";
 				queryURI = serviceURI + "/query";
-			} else
+			}  else if (sparql_framework.equals(Constants.SESAME)) {
+				updateURI = serviceURI + "/statements";
+				queryURI = serviceURI;
+			}else
 				queryURI = serviceURI;
 
 			System.out.format("  INFO: The sevice URI is '%s'\n", serviceURI);
 			System.out.format("  INFO: The query URI is '%s'\n", queryURI);
-			if (sparql_framework.equals(Constants.FUSEKI))
+			if (sparql_framework.equals(Constants.FUSEKI) || sparql_framework.equals(Constants.SESAME))
 				System.out
 						.format("  INFO: The update URI is '%s'\n", updateURI);
 
@@ -115,13 +120,16 @@ public class SPARQLEndpoint {
 				if (sparql_framework.equals(Constants.FUSEKI)) {
 					updateURI = serviceURI + "/update";
 					queryURI = serviceURI + "/query";
+				} else if (sparql_framework.equals(Constants.SESAME)) {
+					updateURI = serviceURI + "/statements";
+					queryURI = serviceURI;
 				} else
 					queryURI = serviceURI;
 
 				System.out.format("  INFO: The sevice URI is '%s'\n",
 						serviceURI);
 				System.out.format("  INFO: The query URI is '%s'\n", queryURI);
-				if (sparql_framework.equals(Constants.FUSEKI))
+				if (sparql_framework.equals(Constants.FUSEKI )|| sparql_framework.equals(Constants.SESAME))
 					System.out.format("  INFO: The update URI is '%s'\n",
 							updateURI);
 
@@ -250,7 +258,6 @@ public class SPARQLEndpoint {
 		UpdateRemote.execute(ur, updateURI);
 	}
 
-	
 	public ResultSet query(Query query) {
 		if (serviceURI == null)
 			throw new ExceptionReporter(new NullPointerException(
