@@ -16,6 +16,8 @@ import uk.ac.dotrural.irp.ecosystem.core.resources.support.reporters.ExceptionRe
 import com.hp.hpl.jena.query.QueryExecution;
 import com.hp.hpl.jena.query.QueryExecutionFactory;
 import com.hp.hpl.jena.query.ResultSet;
+import com.hp.hpl.jena.update.UpdateExecutionFactory;
+import com.hp.hpl.jena.update.UpdateProcessor;
 import com.hp.hpl.jena.update.UpdateRequest;
 
 public class SPARQLEndpoint {
@@ -79,8 +81,9 @@ public class SPARQLEndpoint {
 			throw new ExceptionReporter(new NullPointerException(
 					"No initialising parameters given."));
 
-		System.out.format("   INFO: sparql_framework " + si.getSparqlFramework());
-		
+		System.out.format("   INFO: sparql_framework "
+				+ si.getSparqlFramework());
+
 		if (si.getUri() != null && !si.getUri().trim().equals("")) {
 			serviceURI = si.getUri().trim();
 
@@ -90,15 +93,16 @@ public class SPARQLEndpoint {
 			if (sparql_framework.equals(Constants.FUSEKI)) {
 				updateURI = serviceURI + "/update";
 				queryURI = serviceURI + "/query";
-			}  else if (sparql_framework.equals(Constants.SESAME)) {
+			} else if (sparql_framework.equals(Constants.SESAME)) {
 				updateURI = serviceURI + "/statements";
 				queryURI = serviceURI;
-			}else
+			} else
 				queryURI = serviceURI;
 
 			System.out.format("  INFO: The sevice URI is '%s'\n", serviceURI);
 			System.out.format("  INFO: The query URI is '%s'\n", queryURI);
-			if (sparql_framework.equals(Constants.FUSEKI) || sparql_framework.equals(Constants.SESAME))
+			if (sparql_framework.equals(Constants.FUSEKI)
+					|| sparql_framework.equals(Constants.SESAME))
 				System.out
 						.format("  INFO: The update URI is '%s'\n", updateURI);
 
@@ -129,7 +133,8 @@ public class SPARQLEndpoint {
 				System.out.format("  INFO: The sevice URI is '%s'\n",
 						serviceURI);
 				System.out.format("  INFO: The query URI is '%s'\n", queryURI);
-				if (sparql_framework.equals(Constants.FUSEKI )|| sparql_framework.equals(Constants.SESAME))
+				if (sparql_framework.equals(Constants.FUSEKI)
+						|| sparql_framework.equals(Constants.SESAME))
 					System.out.format("  INFO: The update URI is '%s'\n",
 							updateURI);
 
@@ -175,7 +180,17 @@ public class SPARQLEndpoint {
 
 		UpdateRequest ur = new UpdateRequest();
 		ur.add(sQuery);
-		UpdateRemote.execute(ur, updateURI);
+
+		if (sparql_framework.equals(Constants.SESAME)) {
+			UpdateProcessor up = UpdateExecutionFactory.createRemoteForm(ur,
+					updateURI);
+			up.execute();
+		} else {
+			UpdateProcessor up = UpdateExecutionFactory.createRemote(ur,
+					updateURI);
+			up.execute();
+//			UpdateRemote.execute(ur, updateURI);
+		}
 	}
 
 	public void update(Query... query) {
@@ -215,7 +230,17 @@ public class SPARQLEndpoint {
 
 			ur.add(sQuery);
 		}
-		UpdateRemote.execute(ur, updateURI);
+		if (sparql_framework.equals(Constants.SESAME)) {
+			UpdateProcessor up = UpdateExecutionFactory.createRemoteForm(ur,
+					updateURI);
+			up.execute();
+		} else {
+			UpdateProcessor up = UpdateExecutionFactory.createRemote(ur,
+					updateURI);
+			up.execute();
+//			UpdateRemote.createR(ur, updateURI);
+		}
+//		UpdateRemote.execute(ur, updateURI);
 	}
 
 	public void update(List<Query> query) {
@@ -255,7 +280,16 @@ public class SPARQLEndpoint {
 
 			ur.add(sQuery);
 		}
-		UpdateRemote.execute(ur, updateURI);
+		if (sparql_framework.equals(Constants.SESAME)) {
+			UpdateProcessor up = UpdateExecutionFactory.createRemoteForm(ur,
+					updateURI);
+			up.execute();
+		} else {
+			UpdateProcessor up = UpdateExecutionFactory.createRemote(ur,
+					updateURI);
+			up.execute();
+//			UpdateRemote.execute(ur, updateURI);
+		}
 	}
 
 	public ResultSet query(Query query) {
