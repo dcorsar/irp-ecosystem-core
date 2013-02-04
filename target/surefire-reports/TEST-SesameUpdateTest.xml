@@ -1,60 +1,70 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.001" errors="0" skipped="0" tests="0" name="SesameUpdateTest">
+<testsuite failures="0" time="0.002" errors="0" skipped="0" tests="0" name="SesameUpdateTest">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64"/>
-    <property name="java.vm.version" value="20.0-b12"/>
-    <property name="java.vm.vendor" value="Sun Microsystems Inc."/>
-    <property name="java.vendor.url" value="http://java.sun.com/"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.12-b01-434"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M3909"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
     <property name="path.separator" value=":"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
     <property name="file.encoding.pkg" value="sun.io"/>
-    <property name="user.country" value="GB"/>
+    <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="unknown"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/staylor/Projects/IRP/irp-ecosystem-core"/>
-    <property name="java.runtime.version" value="1.6.0_24-b24"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/endorsed"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="user.dir" value="/Users/david/Programming/ecosystem.core"/>
+    <property name="java.runtime.version" value="1.6.0_37-b06-434-11M3909"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/david/Programming/ecosystem.core"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/david/Programming/ecosystem.core/target/surefire/surefirebooter2927479518675428225.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/8x/g49vkc592bs0ph12_bgbsmt80000gp/T/"/>
     <property name="line.separator" value="
 "/>
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
-    <property name="os.name" value="Linux"/>
-    <property name="classworlds.conf" value="/usr/share/maven3/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64/server:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/amd64:/usr/lib/jvm/java-6-openjdk-amd64/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="MacRoman"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="http.proxyPort" value="8080"/>
+    <property name="surefire.test.class.path" value="/Users/david/Programming/ecosystem.core/target/test-classes:/Users/david/Programming/ecosystem.core/target/classes:/Users/david/.m2/repository/com/sun/jersey/jersey-server/1.16/jersey-server-1.16.jar:/Users/david/.m2/repository/asm/asm/3.1/asm-3.1.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-core/1.16/jersey-core-1.16.jar:/Users/david/.m2/repository/com/sun/jersey/contribs/jersey-spring/1.16/jersey-spring-1.16.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-servlet/1.16/jersey-servlet-1.16.jar:/Users/david/.m2/repository/org/springframework/spring-core/3.0.0.RC3/spring-core-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-asm/3.0.0.RC3/spring-asm-3.0.0.RC3.jar:/Users/david/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/david/.m2/repository/org/springframework/spring-beans/3.0.0.RC3/spring-beans-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-context/3.0.0.RC3/spring-context-3.0.0.RC3.jar:/Users/david/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/david/.m2/repository/org/springframework/spring-expression/3.0.0.RC3/spring-expression-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-web/3.0.0.RC3/spring-web-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-aop/3.0.0.RC3/spring-aop-3.0.0.RC3.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-json/1.16/jersey-json-1.16.jar:/Users/david/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/Users/david/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/Users/david/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/Users/david/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/david/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/Users/david/.m2/repository/org/apache/jena/jena-fuseki/0.2.6-SNAPSHOT/jena-fuseki-0.2.6-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/jena/jena-core/2.10.0-SNAPSHOT/jena-core-2.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/jena/jena-iri/0.9.5-SNAPSHOT/jena-iri-0.9.5-SNAPSHOT.jar:/Users/david/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/Users/david/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/david/.m2/repository/org/apache/jena/jena-tdb/0.10.0-SNAPSHOT/jena-tdb-0.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar:/Users/david/.m2/repository/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-server/8.1.8.v20121106/jetty-server-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-continuation/8.1.8.v20121106/jetty-continuation-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-http/8.1.8.v20121106/jetty-http-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-io/8.1.8.v20121106/jetty-io-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.8.v20121106/jetty-servlet-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-security/8.1.8.v20121106/jetty-security-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-servlets/8.1.8.v20121106/jetty-servlets-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-client/8.1.8.v20121106/jetty-client-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-util/8.1.8.v20121106/jetty-util-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-xml/8.1.8.v20121106/jetty-xml-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/Users/david/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/david/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/Users/david/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/Users/david/.m2/repository/org/slf4j/slf4j-log4j12/1.6.4/slf4j-log4j12-1.6.4.jar:/Users/david/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.4/jcl-over-slf4j-1.6.4.jar:/Users/david/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/david/.m2/repository/org/apache/jena/jena-arq/2.10.0-SNAPSHOT/jena-arq-2.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/david/.m2/repository/org/apache/httpcomponents/httpcore/4.2.3/httpcore-4.2.3.jar:"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="3.2.0-22-generic"/>
-    <property name="user.home" value="/home/staylor"/>
-    <property name="user.timezone" value="Europe/London"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="os.version" value="10.8.2"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|127.0.0.1"/>
+    <property name="user.home" value="/Users/david"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
     <property name="java.specification.version" value="1.6"/>
-    <property name="user.name" value="staylor"/>
-    <property name="java.class.path" value="/usr/share/maven3/boot/plexus-classworlds-2.4.jar"/>
+    <property name="file.encoding" value="MacRoman"/>
+    <property name="user.name" value="david"/>
+    <property name="java.class.path" value="/Users/david/Programming/ecosystem.core/target/test-classes:/Users/david/Programming/ecosystem.core/target/classes:/Users/david/.m2/repository/com/sun/jersey/jersey-server/1.16/jersey-server-1.16.jar:/Users/david/.m2/repository/asm/asm/3.1/asm-3.1.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-core/1.16/jersey-core-1.16.jar:/Users/david/.m2/repository/com/sun/jersey/contribs/jersey-spring/1.16/jersey-spring-1.16.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-servlet/1.16/jersey-servlet-1.16.jar:/Users/david/.m2/repository/org/springframework/spring-core/3.0.0.RC3/spring-core-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-asm/3.0.0.RC3/spring-asm-3.0.0.RC3.jar:/Users/david/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/david/.m2/repository/org/springframework/spring-beans/3.0.0.RC3/spring-beans-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-context/3.0.0.RC3/spring-context-3.0.0.RC3.jar:/Users/david/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/david/.m2/repository/org/springframework/spring-expression/3.0.0.RC3/spring-expression-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-web/3.0.0.RC3/spring-web-3.0.0.RC3.jar:/Users/david/.m2/repository/org/springframework/spring-aop/3.0.0.RC3/spring-aop-3.0.0.RC3.jar:/Users/david/.m2/repository/com/sun/jersey/jersey-json/1.16/jersey-json-1.16.jar:/Users/david/.m2/repository/org/codehaus/jettison/jettison/1.1/jettison-1.1.jar:/Users/david/.m2/repository/com/sun/xml/bind/jaxb-impl/2.2.3-1/jaxb-impl-2.2.3-1.jar:/Users/david/.m2/repository/javax/xml/bind/jaxb-api/2.2.2/jaxb-api-2.2.2.jar:/Users/david/.m2/repository/javax/xml/stream/stax-api/1.0-2/stax-api-1.0-2.jar:/Users/david/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-core-asl/1.9.2/jackson-core-asl-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-mapper-asl/1.9.2/jackson-mapper-asl-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-jaxrs/1.9.2/jackson-jaxrs-1.9.2.jar:/Users/david/.m2/repository/org/codehaus/jackson/jackson-xc/1.9.2/jackson-xc-1.9.2.jar:/Users/david/.m2/repository/org/apache/jena/jena-fuseki/0.2.6-SNAPSHOT/jena-fuseki-0.2.6-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/jena/jena-core/2.10.0-SNAPSHOT/jena-core-2.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/jena/jena-iri/0.9.5-SNAPSHOT/jena-iri-0.9.5-SNAPSHOT.jar:/Users/david/.m2/repository/xerces/xercesImpl/2.10.0/xercesImpl-2.10.0.jar:/Users/david/.m2/repository/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar:/Users/david/.m2/repository/org/apache/jena/jena-tdb/0.10.0-SNAPSHOT/jena-tdb-0.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/org/apache/httpcomponents/httpclient/4.2.2/httpclient-4.2.2.jar:/Users/david/.m2/repository/commons-fileupload/commons-fileupload/1.2.2/commons-fileupload-1.2.2.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-server/8.1.8.v20121106/jetty-server-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/3.0.0.v201112011016/javax.servlet-3.0.0.v201112011016.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-continuation/8.1.8.v20121106/jetty-continuation-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-http/8.1.8.v20121106/jetty-http-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-io/8.1.8.v20121106/jetty-io-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-servlet/8.1.8.v20121106/jetty-servlet-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-security/8.1.8.v20121106/jetty-security-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-servlets/8.1.8.v20121106/jetty-servlets-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-client/8.1.8.v20121106/jetty-client-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-util/8.1.8.v20121106/jetty-util-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/eclipse/jetty/jetty-xml/8.1.8.v20121106/jetty-xml-8.1.8.v20121106.jar:/Users/david/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar:/Users/david/.m2/repository/commons-collections/commons-collections/3.2.1/commons-collections-3.2.1.jar:/Users/david/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar:/Users/david/.m2/repository/org/slf4j/slf4j-api/1.6.4/slf4j-api-1.6.4.jar:/Users/david/.m2/repository/org/slf4j/slf4j-log4j12/1.6.4/slf4j-log4j12-1.6.4.jar:/Users/david/.m2/repository/org/slf4j/jcl-over-slf4j/1.6.4/jcl-over-slf4j-1.6.4.jar:/Users/david/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar:/Users/david/.m2/repository/org/apache/jena/jena-arq/2.10.0-SNAPSHOT/jena-arq-2.10.0-SNAPSHOT.jar:/Users/david/.m2/repository/commons-codec/commons-codec/1.5/commons-codec-1.5.jar:/Users/david/.m2/repository/org/apache/httpcomponents/httpcore/4.2.3/httpcore-4.2.3.jar:"/>
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="java.home" value="/usr/lib/jvm/java-6-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install deploy"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="/Users/david/Programming/ecosystem.core/target/surefire/surefirebooter2927479518675428225.jar /Users/david/Programming/ecosystem.core/target/surefire/surefire1454882487586268480tmp /Users/david/Programming/ecosystem.core/target/surefire/surefire5568542493013161894tmp"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
     <property name="java.vm.info" value="mixed mode"/>
-    <property name="java.version" value="1.6.0_24"/>
-    <property name="java.ext.dirs" value="/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext"/>
-    <property name="securerandom.source" value="file:/dev/./urandom"/>
-    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/netx.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/plugin.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/rhino.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-openjdk-amd64/jre/classes"/>
-    <property name="java.vendor" value="Sun Microsystems Inc."/>
-    <property name="maven.home" value="/usr/share/maven3"/>
+    <property name="java.version" value="1.6.0_37"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="http.proxyHost" value="proxy.abdn.ac.uk"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="localRepository" value="/Users/david/.m2/repository"/>
     <property name="file.separator" value="/"/>
-    <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_37-434"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|127.0.0.1"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16|localhost|*.localhost|127.0.0.1"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
 </testsuite>
