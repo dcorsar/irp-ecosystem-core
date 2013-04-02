@@ -4,8 +4,6 @@ import java.util.List;
 
 import javax.ws.rs.core.UriInfo;
 
-import org.apache.jena.fuseki.http.UpdateRemote;
-
 import uk.ac.dotrural.irp.ecosystem.core.Constants;
 import uk.ac.dotrural.irp.ecosystem.core.models.jaxb.system.EndpointInfo;
 import uk.ac.dotrural.irp.ecosystem.core.models.jaxb.system.Query;
