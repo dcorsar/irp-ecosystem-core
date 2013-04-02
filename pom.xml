@@ -65,7 +65,7 @@
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>jena-arq</artifactId>
-			<version>2.10.0-SNAPSHOT</version>
+			<version>2.10.0</version>
 			<type>jar</type>
 		</dependency>
 	<!--	<dependency>
@@ -79,6 +79,11 @@
 			<version>6.0</version>
 			<type>jar</type>
 		</dependency> -->
+	<dependency>
+		<groupId>org.apache.httpcomponents</groupId>
+		<artifactId>httpclient</artifactId>
+		<version>4.2.3</version>
+	</dependency>
 	</dependencies>
 	<repositories>
 		<repository>
@@ -122,11 +127,11 @@
 			</snapshots>
 			<url>https://repository.apache.org/content/repositories/snapshots/</url>
 		</repository>
-		<repository>
+	<!-- 	<repository>
 			<id>totalchange</id>
 			<name>total change</name>
 			<url>http://www.totalchange.com/maven2</url>
-		</repository>
+		</repository> -->
 	</repositories>
 
 </project>

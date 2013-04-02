@@ -85,19 +85,19 @@ public class SPARQLEndpoint {
 				+ si.getSparqlFramework());
 
 		if (si.getUri() != null && !si.getUri().trim().equals("")) {
-			serviceURI = si.getUri().trim();
+			this.serviceURI = si.getUri().trim();
 
-			sparql_framework = (si.getSparqlFramework() != null && !si
+			this.sparql_framework = (si.getSparqlFramework() != null && !si
 					.getSparqlFramework().trim().equals("")) ? si
 					.getSparqlFramework() : "joseki";
 			if (sparql_framework.equals(Constants.FUSEKI)) {
-				updateURI = serviceURI + "/update";
-				queryURI = serviceURI + "/query";
+				this.updateURI = serviceURI + "/update";
+				this.queryURI = serviceURI + "/query";
 			} else if (sparql_framework.equals(Constants.SESAME)) {
-				updateURI = serviceURI + "/statements";
-				queryURI = serviceURI;
+				this.updateURI = serviceURI + "/statements";
+				this.queryURI = serviceURI;
 			} else
-				queryURI = serviceURI;
+				this.queryURI = serviceURI;
 
 			System.out.format("  INFO: The sevice URI is '%s'\n", serviceURI);
 			System.out.format("  INFO: The query URI is '%s'\n", queryURI);
@@ -110,25 +110,25 @@ public class SPARQLEndpoint {
 					"Service is created with SPARQL endpoint '%s'", serviceURI));
 		} else if (si.getServicename() != null
 				&& !si.getServicename().trim().equals("")) {
-			sparql_framework = (si.getSparqlFramework() != null && !si
+			this.sparql_framework = (si.getSparqlFramework() != null && !si
 					.getSparqlFramework().trim().equals("")) ? si
 					.getSparqlFramework() : "joseki";
 
-			String[] elems = uriInfo.getBaseUri().toString().split("/");
+			String[] elems = this.uriInfo.getBaseUri().toString().split("/");
 			if (elems.length >= 3) {
-				serviceURI = elems[0]
+				this.serviceURI = elems[0]
 						+ "//"
 						+ elems[2]
 						+ (sparql_framework.equals(Constants.JOSEKI) ? "/joseki/"
 								: "/") + si.getServicename();
-				if (sparql_framework.equals(Constants.FUSEKI)) {
-					updateURI = serviceURI + "/update";
-					queryURI = serviceURI + "/query";
+				if (this.sparql_framework.equals(Constants.FUSEKI)) {
+					this.updateURI = serviceURI + "/update";
+					this.queryURI = serviceURI + "/query";
 				} else if (sparql_framework.equals(Constants.SESAME)) {
-					updateURI = serviceURI + "/statements";
-					queryURI = serviceURI;
+					this.updateURI = serviceURI + "/statements";
+					this.queryURI = serviceURI;
 				} else
-					queryURI = serviceURI;
+					this.queryURI = serviceURI;
 
 				System.out.format("  INFO: The sevice URI is '%s'\n",
 						serviceURI);
@@ -143,7 +143,7 @@ public class SPARQLEndpoint {
 						serviceURI));
 			} else
 				throw new ExceptionReporter(new NullPointerException(
-						String.format("Peculiar base URI '%s'", uriInfo
+						String.format("Peculiar base URI '%s'", this.uriInfo
 								.getBaseUri().toString())));
 		}
 
@@ -161,7 +161,7 @@ public class SPARQLEndpoint {
 											+ "It does not support SPARQL updates such as INSERT/DELETE/UPDATE/",
 									serviceURI)));
 
-		if (serviceURI == null)
+		if (updateURI == null)
 			throw new ExceptionReporter(new NullPointerException(
 					"Service MUST be initialised with a SPARQL endpoint."));
 		if (query == null)
@@ -202,7 +202,7 @@ public class SPARQLEndpoint {
 											+ "It does not support SPARQL updates such as INSERT/DELETE/UPDATE/",
 									serviceURI)));
 
-		if (serviceURI == null)
+		if (updateURI == null)
 			throw new ExceptionReporter(new NullPointerException(
 					"Service MUST be initialised with a SPARQL endpoint."));
 		if (query == null)
@@ -252,7 +252,7 @@ public class SPARQLEndpoint {
 											+ "It does not support SPARQL updates such as INSERT/DELETE/UPDATE/",
 									serviceURI)));
 
-		if (serviceURI == null)
+		if (updateURI == null)
 			throw new ExceptionReporter(new NullPointerException(
 					"Service MUST be initialised with a SPARQL endpoint."));
 		if (query == null)
@@ -293,7 +293,7 @@ public class SPARQLEndpoint {
 	}
 
 	public ResultSet query(Query query) {
-		if (serviceURI == null)
+		if (queryURI == null)
 			throw new ExceptionReporter(new NullPointerException(
 					"Service MUST be initialised with a SPARQL endpoint."));
 		if (query == null)
@@ -318,7 +318,8 @@ public class SPARQLEndpoint {
 	}
 
 	public boolean ask(Query query) {
-		if (serviceURI == null)
+		System.out.println(queryURI);
+		if (queryURI == null)
 			throw new ExceptionReporter(new NullPointerException(
 					"Service MUST be initialised with a SPARQL endpoint."));
 		if (query == null)
